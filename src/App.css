@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+.pp {
+  height: 100vh;
+  background: linear-gradient(to left, #333399,#ff00cc);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-page{
+  width: 650px;
+  height: 450px;
+  background: rgb(235, 235, 235);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #292929;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  transition: all .4s;
+}
+.login-page:hover{
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.300);
+}
+.media-page:hover{
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.300);
+}
+.h1{
+  margin-bottom: 30px;
+}
+.login-page-input {
+  width: 250px;
+  height: 35px;
+  margin: 8px;
+  background: rgb(218, 218, 218);
+  border: none;
+  padding-left: 10px;
+  outline: none;
+}
+.btn{
+  width: 250px;
+  height: 35px;
+  margin: 8px;
+  background: rgba(111, 169, 255, 0.8);
+  color: #e2e2e2;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .4s;
+}
+.btn:hover{
+  background: #f041e1cc;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
