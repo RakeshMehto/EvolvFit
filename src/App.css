@@ -1,6 +1,6 @@
 .pp {
   height: 100vh;
-  background: linear-gradient(to left, #333399,#ff00cc);
+  background: linear-gradient(to left, #5252fa,#ff00cc);
 }
 .login-page{
   width: 650px;
@@ -20,8 +20,15 @@
 .login-page:hover{
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.300);
 }
+.media-back{
+  background: linear-gradient(to left, #5252fa,#ff00cc);
+}
+.media-page{
+  transition: all .3s;
+}
 .media-page:hover{
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.300);
+  background-color: #ff47e0;
 }
 .h1{
   margin-bottom: 30px;
@@ -48,5 +55,16 @@
 }
 .btn:hover{
   background: #f041e1cc;
+}
+.searchInput{
+  width: 450px;
+  height: 35px;
+  margin: 20px;
+  background: rgb(255, 136, 229);
+  border: none;
+  padding-left: 10px;
+  outline: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 

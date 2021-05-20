@@ -1,32 +1,33 @@
-import React, { Component } from 'react';
+import '../App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import { DISHES } from './dishes';
 import { Media } from 'reactstrap';
 
-class User extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            dishes: DISHES
-        };
-    }
-    render() {
+function User () {
       const [searchTerm, setSearchterm]=useState("");
-        const menu = this.state.dishes.filter((dish)=>{
+
+        return (
+          <div className="media-back">
+          <div className="container ">
+            <div className="row"><input className="searchInput" type="text" placeholder="Search Dishes" onChange={(event)=>{setSearchterm(event.target.value);}} /></div>
+            <div className="row ">
+              <Media list>
+             { DISHES.filter((dish)=>{
           if(searchTerm==""){
             return dish
           }
           else if (dish.name.toLowerCase().includes(searchTerm.toLowerCase())){
             return dish
-          })
+          }
         }).map((dish) => {
-            return (
+          return(
               <div>
 
-              <div key={dish.id} className="col-12 mt-5 media-page">
-                <Media tag="li">
+              <div key={dish.id} className="col-12 media-page ">
+                <Media tag="li" className="mt-2 mb-2 pt-5 pb-5 ">
                   <Media left middle>
-                      <Media object src={dish.image} alt={dish.name} />
+                      <Media height="110px" width="110px" object src={dish.image} alt={dish.name} />
                   </Media>
                   <Media body className="ml-5">
                     <Media heading>{dish.name}</Media>
@@ -36,19 +37,14 @@ class User extends Component {
               </div>
               </div>
             );
-        });
-
-        return (
-          <div className="container">
-            <div className="row"><input type="text" placeholder="Search Dishes" onChange={(event)=>{setSearchterm(event.target.value);}} /></div>
-            <div className="row ">
-              <Media list>
-                  {menu}
-              </Media>
-            </div>
+          })}
+          </Media>
           </div>
+          </div>
+          </div>
+
         );
     }
-}
+
 
 export default User;
