@@ -1,19 +1,29 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button} from 'reactstrap'
-function Home(props){
-    return(
-        <div className="container">
-            <div className="row">
-                <div className="col-6">
-                <Button color="danger"><Link to='/userlogin'>User</Link></Button>
-                </div>
-                <div className="col-6">
-                <Button color="danger"><Link to='/adminlogin'>Admin</Link></Button>
-                </div>
+import React from "react";
+import "../App.css";
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+function Home(props) {
+  return (
+    <div className="pp">
+      <div className="container">
+        <div className="home-page">
+          <div className="row">
+            <div className="">
+              <button className="btn btn1" color="danger">
+                <Link to="/userPage">User</Link>
+              </button>
             </div>
+          </div>
+          <div className="row">
+            <div className="">
+              <button className="btn btn2" color="danger">
+                <Link to="/adminlogin">Admin</Link>
+              </button>
+            </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 export default Home;
